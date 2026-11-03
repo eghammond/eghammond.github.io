@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Background and body text match astralcodexten.com. */
+  --color-page: #cedeee;
+  --color-ink: #3e4851;
+  --color-muted: #55606a;
+  --color-accent: #1d5a8a;
+  --color-rule: #b2c0ce;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-newsreader);
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+::selection {
+  background: #67bdfc66;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Rendered markdown in blog posts. */
+.prose > * + * {
+  margin-top: 1.25em;
+}
+.prose h2,
+.prose h3 {
+  font-family: var(--font-serif);
+  line-height: 1.3;
+  margin-top: 2em;
+}
+.prose h2 {
+  font-size: 1.6rem;
+}
+.prose h3 {
+  font-size: 1.3rem;
+}
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+}
+.prose ul {
+  list-style: disc;
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose blockquote {
+  border-left: 3px solid var(--color-rule);
+  padding-left: 1em;
+  color: var(--color-muted);
+}
+.prose code {
+  font-size: 0.9em;
+  background: #c2d1e0;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+.prose pre {
+  background: #c2d1e0;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+.prose img {
+  border-radius: 6px;
+}
+.prose hr {
+  border-color: var(--color-rule);
+}
