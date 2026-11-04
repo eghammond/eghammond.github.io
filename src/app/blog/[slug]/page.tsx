@@ -9,7 +9,10 @@ type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getAllPosts().map(({ slug }) => ({ slug }));
+  const params = getAllPosts().map(({ slug }) => ({ slug }));
+  // Static export fails on an empty list, so with no posts, return a placeholder.
+  // It has no matching post, so it renders the not-found page.
+  return params.length > 0 ? params : [{ slug: "__placeholder__" }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

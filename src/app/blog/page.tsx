@@ -13,7 +13,7 @@ export default function Blog() {
       {posts.length > 0 ? (
         <PostList posts={posts} />
       ) : (
-        <p>Nothing here yet.</p>
+        <p>No blog posts have been written yet.</p>
       )}
     </>
   );

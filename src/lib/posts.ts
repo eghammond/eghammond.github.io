@@ -26,6 +26,8 @@ function readPost(slug: string) {
 }
 
 export function getAllPosts(): PostMeta[] {
+  // Git doesn't track empty folders, so this is missing when there are no posts.
+  if (!fs.existsSync(POSTS_DIR)) return [];
   return fs
     .readdirSync(POSTS_DIR)
     .filter((name) => name.endsWith(".md"))
