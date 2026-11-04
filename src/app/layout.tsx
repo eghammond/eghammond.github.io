@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </header>
         <main className="flex-1 py-8">{children}</main>
         <footer className="py-10 text-sm text-muted">
-          © {site.name}
+          © {new Date().getFullYear()} {site.name}
         </footer>
       </body>
     </html>
