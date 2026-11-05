@@ -35,7 +35,7 @@ export const site = {
       role: "UCS1 / Tutor",
       org: "UC Berkeley",
       dates: "Aug 2024 - Aug 2025",
-      summary: "Tutor for Data 100. Worked on grading and Lectures teams.",
+      summary: "Tutor for Data 100. Worked on Grading and Lectures teams.",
     }
   ],
 
