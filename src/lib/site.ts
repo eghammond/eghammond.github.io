@@ -12,9 +12,9 @@ export const site = {
 
   // Set href to a real URL (or a mailto: link). Entries left as "#" are hidden.
   links: [
-    { label: "GitHub", href: "https://github.com/eghammond" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/eghammond" },
     { label: "Email", href: "mailto:eli.gb.hammond@gmail.com" },
+    //{ label: "GitHub", href: "https://github.com/eghammond" },
   ],
 
   // Empty lists hide their section.
